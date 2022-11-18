@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+body{
+  background-color: black;
+}
+.sidebar {
+  height: 100vh;
+  width: 260px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:rgb(36, 32, 32);
+  overflow-x: hidden;
+  padding-top: 1px;
+}
+
+.sidebar a {
+  
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  margin-top: 0px;
+  margin-left: 2px;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 260px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+
+
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+.logo{
+    font-size: 30px;
+    color: red;
+    margin-left: 10px;
+    margin-top: 9px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+h1{
+    font-size: 90px;
+    color: red;
+    padding-top: 20px;
+    font-family: cursive;
+}
+.nav li {
+    display: inline-block;
+  list-style: outside none none;
+  margin: 5em .4em;
+margin-bottom: -4px;
+}
+.nav{
+
+}
+.nav a{
+    padding: .2em .4em;
+    color: aliceblue;
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+    margin-bottom: -3290px;
+    margin-top: -30px;
+    padding-left: -2px;
+}
+
+.nav a::before,
+.nav a::after {
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  transition: all .35s ease;
+  opacity: 0;
+}
+
+.nav a::before {
+  content: '';
+  right: 0;
+  top: 0;
+  border-top: 3px solid #891414;
+  border-right: 3px solid #891414;
+  transform: translate(-100%, 50%);
+}
+
+.nav a:after {
+  content: '';
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid #0f1c64;
+  border-left: 3px solid #0f1c64;
+  transform: translate(100%, -50%)
+}
+
+.nav a:hover:before,
+.nav a:hover:after{
+  transform: translate(0,0);
+  opacity: 1;
+}
+
+.nav a:hover {
+  color: palevioletred;
+}
+span{
+    color: green;
+    font-size: 90px;
+    font-family: cursive;
+}
+.content p {
+        border-right: .15em solid orange;
+        font-family: sans-serif;
+        font-size: 54px;
+        white-space: nowrap;
+        overflow: hidden;
+        background-color: black;
+      }
+      h1{
+        margin-left: 290px;
+      }
+      span{
+        padding-top: -40%;
+      }
+      h2{
+        margin-left: 290px;
+        margin-top: -70px;
+        color: white;
+      }
+      .div{
+            border-radius:30% 70% 70% 30% / 31% 28% 72% 69%;
+            background-color: rgb(255, 72, 0);
+            width: 300px;
+            height: 390px;
+            margin-left: 980px;
+            margin-top:-25% ;
+            padding-left: -0px;
+      }
+      .div:hover{
+    left: 20%;
+    top: 2%;
+    bottom: unset;
+    transform: translateX(30px 30px);
+      }
+      .div img{
+        margin-left: -170px;
+        margin-top: 30px;
+      }
+        .butt1{
+            margin-left: 280px;
+            border: none;
+            width: 200px;
+            height: 60px;background-color:orangered;
+            color: white;
+            font-size: 17px;
+        }
+        .butt1:hover{
+            background-color: green;
+            color: black;
+        }
+        .soc li{
+           margin-top: 3px;
+          
+           padding: 1px;
+
+        }
+        .soc1 li a{
+          margin-top: 3px;
+        }
+        .soc{
+          display: flex;
+           justify-content: space-around;
+           margin-top: 34%;
+           background-color: ;
+           height: 127px;
+        }
+        .soc1{
+          background-color: transparent;
+          margin-top: 50px;
+          background-color:transparent;
+          color: black;
+          width: 60px;
+          height: 60px;
+          text-align: center;
+          border-radius: 70px;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        }
+        .soc1:hover{
+        background-color: white;
+        color: black;
+        }
+        .pc{
+          padding-left: 50px;
+        }
+.hidden {
+  opacity:0;
+}
+.console-container {
+ 
+  font-family:Khula;
+  font-size:5px;
+  text-align:center;
+  height:200px;
+  width:100px;
+  display:block;
+  position:absolute;
+  color:white;
+ padding-left: 22%;
+ padding-top: -100%;
+  margin:auto;
+}
+.console-underscore {
+   display:inline-block;
+  position:relative;
+  margin-top: -4%;
+  left:10px;
+}
+.console-container{
+  margin-top: -11%;
+}
+ .hold{
+  background-color:black;
+  height: 9000px;
+  margin-top: 140px;
+  margin-right: -14px;
+  margin-left: 160px;
+        }
+        h4{
+          padding-left: 180px;
+          padding-top: 63px;
+          color: white;
+          font-size: 40px;
+
+        }
+        hr{
+          width: px;
+          margin-left:-em;
+          margin-top: -1%;
+          margin-right: 760px;
+          margin-left: 184px;
+        }
+        .hoo{
+          padding-left: 180px;
+          color: white;
+          font-size: 16px;
+          font-family: sans-serif;
+          font-weight: -100px;
+          padding-top: -20px;
+        }
+        .div4{
+          margin-left: 200px;
+          margin-top: 50px;
+        }
+        .line{
+          background-color:white;
+          width: 900px;
+          height: 30px;
+        margin-top: 20px;
+
+        }
+        .arry{
+          background-color: gray;
+          width: 880px;
+          height: 30px;
+          color: black;
+        }
+        .linek{
+          background-color:white;
+          width: 900px;
+          height: 30px;
+        margin-top: 20px;
+
+        }
+        .arryk{
+          background-color:gray;
+          width: 750px;
+          height: 30px;
+          color: black;
+        }
+        .linekk{
+          background-color: white;
+          width: 900px;
+          height: 30px;
+        margin-top: 20px;
+
+        }
+        .arrykk{
+          background-color: gray;
+          width: 650px;
+          height: 30px;
+          color: black;
+        }
+        .skkk{
+          padding-left:8px;
+          color: white;
+          font-size: 40px;
+          font-family: sans-serif;
+          padding-top: 20px;
+        }
+        .obj{
+          font-size: 18px;
+          color: white;
+          padding-left: 8px;
+        }
+       .time{
+        background-color: rgb(168, 154, 154);
+        width: 900px;
+        height: 130px;
+        margin-left: 200px;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 4%;
+       }
+       .hood{
+        font-size: 30px;
+        font-family: sans-serif;
+        color: black;
+        padding-left: 30%;
+       }
+       .arrage{
+        padding-top: 3%;
+        font-size: 25px;
+       }
+       .press{
+        display: flex;
+        justify-content: space-around;
+        margin-left: 140px;
+        width: auto;
+        height: 400px;
+        margin-top: 5%;
+          }
+          .amout{
+            width: 380px;
+            height: 440px;
+          }
+          .numb{
+            background-color: gray;
+            padding: 20px;
+            margin-bottom: 1px;
+            text-align: center;
+            font-size: 25px;
+          }
+          #pro{
+            color: white;
+            background-color: rgb(85, 72, 72);
+            font-size: 38px;
+          }
+          .wed{
+            display: flex;
+            justify-content: space-around;
+            margin-left: 180px;
+            background-color:transparent;
+            width: auto;
+            height: 500px;
+            margin-top: 8%;
+          }
+          .box{
+            background-color:white;
+            margin-top: 30px;
+            margin-left: 3px;
+            height: 240px;
+            width: 270px;
+            border: 1px solid black;
+            color: black;
+            font-size: 17px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            text-align: center;
+            
+          }
+          .box:hover{
+            border-left: 2px solid orange;
+            border-right: 2px solid orange;
+            border-bottom: 5px solid orange;
+          }
+          i{
+            color: white;
+            font-size: 40px;
+          }
+          .wedx{
+            display: flex;
+            justify-content: space-around;
+            background-color:tr;
+            margin-left: 180px;
+            width: auto;
+            height: 300px;
+            margin-top: -20%;
+          }
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+    <div class="logo">
+        Protfolio
+    </div>
+    <div class="nav">
+        <li><a href="#home"><i class="fa fa-fw fa-home"></i> Home</a></li> <br>
+        <li><a href="#about"><i class="fa fa-fw fa-book"></i> About</a></li><br>
+        <li><a href="#photo"><i class="fa fa-fw fa-image"></i>Photographer</a></li><br>
+        <li><a href="#service"><i class="fa fa-fw fa-wrench"></i> service</a></li><br>
+        <li><a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a></li><br>
+    </div>
+        <div class="soc">
+     <div class="soc1"> <a href="https://www.facebook.com/"> <li class="fa fa-facebook"></li></a></div>
+     <div class="soc1"> <a href="https://www.facebook.com/"> <li class="fa fa-instagram"></li></a></div>
+     <div class="soc1"> <a href="https://www.facebook.com/"> <li class="fa fa-twitter"></li></a></div>
+    </div>
+</div>
+<div class="content" id="home">
+    <h1>Hello I'M</h1>
+    <p>
+    <div class='console-container'><span id='text'>
+      <div class='console-underscore' id='console'>&#95;</div></div>
+    </p>
+    <h2>
+      Hello I'm a WED DEVEOPER also a UIX Dising, I am 15  <br>
+     Year and I am still in Height cshool
+    </h2>
+    <button class="butt1">Downloard CV</button>
+    <div class="div">
+      <img src="./295558544_184037107327790_3572463236551711175_n-removebg-preview.png" alt="">
+    </div>
+    <div class="hold" id="about">
+     <h4>My Name</h4>
+     <hr>
+     <h6 class="hoo">
+      Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+     </h6>
+     <div class="div4">
+     <span class="skkk">Skill</span> <br> <br>
+     <span class="obj">Microsoft</span>
+     <div class="line">
+      <div class="arry">90%</div>
+     </div> <br> <br>
+     <span class="obj">wed developnment</span>
+     <div class="linek">
+      <div class="arryk">70%</div>
+     </div> <br> <br>
+     <span class="obj">Graphy</span>
+     <div class="linekk">
+      <div class="arrykk">60%</div>
+     </div>
+    </div>
+    <div class="time">
+      <div class="arrage"><span class="hood">121+</span> <br> Meetings</div>
+      <div class="arrage"><span class="hood">91+</span> <br> Partners</div>
+      <div class="arrage"><span class="hood">70+</span><br> Projects Done</div>
+      <div class="arrage"><span class="hood">50+</span><br> Happy Clients</div>
+    </div>
+    <div class="press">
+      <div class="amout">
+        <div class="numb" id="pro">my Price</div>
+        <div class="numb">Photography - 20$</div>
+        <div class="numb">Mircosoft - 10$</div>
+        <div class="numb">Wedsite - 120$</div>
+        <div class="numb">UIX desing - 30$</div>
+        <div class="numb">Head work - 50$</div>
+      </div>
+      <div class="amout" >
+        <div class="numb" id="pro">Pro</div>
+        <div class="numb">Photography - 30$</div>
+        <div class="numb">Mircosoft - 20$</div>
+        <div class="numb">Wedsite - 200$</div>
+        <div class="numb">UIX desing - 50$</div>
+        <div class="numb">Head work - 70$</div>
+      </div>
+    </div>
+    <div class="wed" id="service">
+      <div class="box">
+        <i class='fa fa-shield' style="font-size:60px;color:lightblue; margin-left: 5px;"></i> <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis delectus distinctio modi ut eveniet illum maxLorem ipsum dolor sit amet consectetur adipisicing elit. Officiis delectus distinctio modi ut eveniet illum maxLorem ipsum dolor sit amet consectetur adipisicing elit. Officiis delectus distinctio </div>
+      <div class="box"> <i class='fa fa-shield' style="font-size:60px;color:lightblue; margin-left: 5px;"></i> </i> <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis delectus distinctio modi ut eveniet illum maxLorem ipsum dolor sit amet consectetur adipisicing elit. Officiis delectus distinctio modi ut eveniet illum maxLorem ipsum dolor sit amet consectetur adipisicing elit. Officiis delectus distinctio </div>
+      <div class="box"><i class='fa fa-shield' style="font-size:60px;color:lightblue; margin-left: 5px;"></i>  <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis delectus distinctio modi ut eveniet illum maxLorem ipsum dolor sit amet consectetur adipisicing elit. Officiis delectus distinctio modi ut eveniet illum maxLorem ipsum dolor sit amet consectetur adipisicing elit. Officiis delectus distinctio </div>
+    </div>
+    <div class="wedx">
+      <div class="box"><i class='fa fa-shield' style="font-size:60px;color:lightblue; margin-left: 5px;"></i>  <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis delectus distinctio modi ut eveniet illum maxLorem ipsum dolor sit amet consectetur adipisicing elit. Officiis delectus distinctio modi ut eveniet illum maxLorem ipsum dolor sit amet consectetur adipisicing elit. Officiis delectus distinctio </div>
+      <div class="box"><i class='fa fa-shield' style="font-size:60px;color:lightblue; margin-left: 5px;"></i>  <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis delectus distinctio modi ut eveniet illum maxLorem ipsum dolor sit amet consectetur adipisicing elit. Officiis delectus distinctio modi ut eveniet illum maxLorem ipsum dolor sit amet consectetur adipisicing elit. Officiis delectus distinctio </div>
+      <div class="box"><i class='fa fa-shield' style="font-size:60px;color:lightblue; margin-left: 5px;"></i>  <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis delectus distinctio modi ut eveniet illum maxLorem ipsum dolor sit amet consectetur adipisicing elit. Officiis delectus distinctio modi ut eveniet illum maxLorem ipsum dolor sit amet consectetur adipisicing elit. Officiis delectus distinctio </div>
+    </div>
+</body>
+<script>
+// function([string1, string2],target id,[color1,color2])    
+consoleText(['EmmanuelKorsor.', ' A..wed', 'Developer.','A..Office',''], 'text',['tomato','rebeccapurple','lightblue']);
+
+function consoleText(words, id, colors) {
+  if (colors === undefined) colors = ['#fff'];
+  var visible = true;
+  var con = document.getElementById('console');
+  var letterCount = 1;
+  var x = 1;
+  var waiting = false;
+  var target = document.getElementById(id)
+  target.setAttribute('style', 'color:' + colors[0])
+  window.setInterval(function() {
+
+    if (letterCount === 0 && waiting === false) {
+      waiting = true;
+      target.innerHTML = words[0].substring(0, letterCount)
+      window.setTimeout(function() {
+        var usedColor = colors.shift();
+        colors.push(usedColor);
+        var usedWord = words.shift();
+        words.push(usedWord);
+        x = 1;
+        target.setAttribute('style', 'color:' + colors[0])
+        letterCount += x;
+        waiting = false;
+      }, 1000)
+    } else if (letterCount === words[0].length + 1 && waiting === false) {
+      waiting = true;
+      window.setTimeout(function() {
+        x = -1;
+        letterCount += x;
+        waiting = false;
+      }, 1000)
+    } else if (waiting === false) {
+      target.innerHTML = words[0].substring(0, letterCount)
+      letterCount += x;
+    }
+  }, 120)
+  window.setInterval(function() {
+    if (visible === true) {
+      con.className = 'console-underscore hidden'
+      visible = false;
+
+    } else {
+      con.className = 'console-underscore'
+
+      visible = true;
+    }
+  }, 400)
+}
+</script>
+</html>
